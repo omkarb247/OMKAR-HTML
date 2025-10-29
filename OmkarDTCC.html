@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Safety Learning for Kids</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0a0f24;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    canvas#bgCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      color: #66b3ff;
+      text-shadow: 0 0 10px #007bff;
+    }
+
+    header p {
+      color: #ddd;
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+
+    .start-btn {
+      margin-top: 30px;
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      background: linear-gradient(90deg, #6a5acd, #00bfff);
+      border: none;
+      border-radius: 25px;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 0 15px #00bfff;
+      transition: transform 0.3s;
+    }
+
+    .start-btn:hover {
+      transform: scale(1.1);
+    }
+
+    section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 25px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      backdrop-filter: blur(6px);
+      transition: 0.4s;
+    }
+
+    section:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 25px #00bfff;
+    }
+
+    h2 {
+      color: #ffd700;
+      text-shadow: 0 0 10px #ffb400;
+    }
+
+    ul {
+      line-height: 1.8;
+    }
+
+    li:hover {
+      color: #66ccff;
+      transition: 0.3s;
+    }
+
+    .fun-facts {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 15px;
+      padding: 20px;
+      margin-top: 25px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: rgba(255,255,255,0.05);
+      color: #a9c9ff;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .robot {
+      width: 100px;
+      height: 100px;
+      background: url('https://cdn-icons-png.flaticon.com/512/4712/4712103.png') no-repeat center/contain;
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="bgCanvas"></canvas>
+
+  <header>
+    <h1>Cyber Safety Learning for Kids</h1>
+    <p>Learn how to stay safe, smart, and kind online 💻✨</p>
+    <button class="start-btn" onclick="scrollToSection()">Start Learning</button>
+  </header>
+
+  <section id="about">
+    <h2>About Cyber Safety</h2>
+    <p>
+      Cyber safety helps kids use the internet responsibly. It’s all about protecting personal information, avoiding online scams, and knowing how to act kindly in digital spaces.
+    </p>
+  </section>
+
+  <section>
+    <h2>Online Safety Tips for Kids</h2>
+    <ul>
+      <li>Never share your passwords or personal details.</li>
+      <li>Ask an adult before clicking unknown links or downloads.</li>
+      <li>Be kind online — think before you post!</li>
+      <li>Don’t talk to strangers or share private pictures.</li>
+      <li>Report any suspicious message or bully immediately.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Common Internet Threats</h2>
+    <ul>
+      <li><b>Phishing:</b> Fake messages that steal your information.</li>
+      <li><b>Malware:</b> Bad programs that harm your computer.</li>
+      <li><b>Cyberbullying:</b> Mean messages or teasing online.</li>
+      <li><b>Fake Accounts:</b> People pretending to be others.</li>
+    </ul>
+
+    <div class="fun-facts">
+      <h3>Fun Facts 💡</h3>
+      <ul>
+        <li>The first computer virus appeared in 1986 — it was called “Brain.”</li>
+        <li>Cyber robots (AI) now help detect threats faster than humans!</li>
+        <li>Over 70% of kids play online games — always choose safe ones!</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>About Digital Trust & Awareness</h2>
+    <p>
+      Digital Trust is the confidence users, customers, and organizations have in the ability of technology, people, and processes to ensure a secure and ethical digital experience.
+    </p>
+    <p>
+      It plays a major role in creating a safe online world where everyone can interact and share without fear.
+    </p>
+
+    <ul>
+      <li><b>Security & Privacy:</b> Protecting personal and confidential data from misuse.</li>
+      <li><b>Transparency:</b> Clearly communicating how data is collected and used.</li>
+      <li><b>Ethical Use of Technology:</b> Ensuring fairness and honesty in digital platforms.</li>
+      <li><b>Awareness:</b> Educating kids and adults about safe digital behavior and cyber hygiene.</li>
+      <li><b>Accountability:</b> Organizations taking responsibility for protecting user trust and information.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Project Contribution 👨‍💻</h2>
+    <p><b>Omkar Bhujbal:</b> Created all text pages and developed cybersecurity learning modules, including the Cyber Safety Quiz for Kids.</p>
+    <p><b>Contribution:</b> Text content, website design modules, and Cyber Safety Quiz for Kids.</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Cyber Safety & Digital Trust Awareness Project | Made by Omkar Bhujbal</p>
+  </footer>
+
+  <div class="robot"></div>
+
+  <script>
+    // Smooth scroll
+    function scrollToSection() {
+      document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Animated glowing background
+    const canvas = document.getElementById('bgCanvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 1;
+        this.speedY = Math.random() * 0.5 + 0.2;
+        this.color = ['#6a5acd', '#00bfff', '#ffd700'][Math.floor(Math.random() * 3)];
+      }
+
+      update() {
+        this.y += this.speedY;
+        if (this.y > canvas.height) this.y = 0;
+      }
+
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.shadowColor = this.color;
+        ctx.shadowBlur = 10;
+        ctx.fill();
+      }
+    }
+
+    for (let i = 0; i < 120; i++) {
+      particles.push(new Particle());
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let p of particles) {
+        p.update();
+        p.draw();
+      }
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  </script>
+</body>
+</html>
